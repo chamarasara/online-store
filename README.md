@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🛒 Online Store Application
 
-## Getting Started
+This is a full-stack e-commerce application built using Next.js, PostgreSQL, Sequelize ORM, Redux Toolkit, and Tailwind CSS.
+The application supports product listing, cart management, checkout with transaction safety, and basic admin features.
 
-First, run the development server:
+🧰 Technology Stack
+Frontend
 
-```bash
-npm run dev
-# or
+Next.js (App Router)
+
+React
+
+Redux Toolkit (state management)
+
+Tailwind CSS (styling)
+
+Backend
+
+Next.js API Routes
+
+PostgreSQL (relational database)
+
+Sequelize ORM
+
+Database transactions & row locking
+
+📋 Prerequisites
+
+Make sure the following are installed on your machine:
+
+Node.js (v18 or later)
+
+PostgreSQL
+
+npm or yarn
+
+⚙️ Setup Instructions
+1️⃣ Clone the Repository
+cd online-store
+
+2️⃣ Install Dependencies
+yarn install
+
+3️⃣ Environment Configuration
+
+Create a .env file in the project root:
+
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=online_store
+DB_USER=postgres
+DB_PASSWORD=postgres
+
+
+Update the values based on your PostgreSQL configuration.
+
+4️⃣ Database Setup
+
+Create the PostgreSQL database:
+
+CREATE DATABASE online_store;
+
+
+Run Sequelize sync (if auto-sync is enabled) or migrations if configured.
+
+▶️ Running the Application
+Start Development Server
+
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The application will be available at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🔗 Available Routes
+User
 
-To learn more about Next.js, take a look at the following resources:
+/ – Product listing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+/checkout – Checkout page
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+/order-confirmation – Order success page
 
-## Deploy on Vercel
+Admin
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+/admin – Dashboard
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+/admin/orders – Order list (paginated)
+
+🔐 Key Technical Highlights
+
+Concurrency-safe checkout using database transactions
+
+Row-level locking to prevent overselling
+
+Redux Toolkit for predictable state management
+
+Paginated admin order list
+
+Responsive UI using Tailwind CSS
+
+🧪 API Overview
+Method	Endpoint	Description
+GET	/api/products	Get all products
+POST	/api/orders	Place an order
+GET	/api/admin/orders	Get paginated orders
+GET	/api/admin/dashboard	Admin dashboard metrics
+📌 Notes
+
+👨‍💻 Author
+
+Chamara Sarathchandra
+Senior Full-Stack Developer
