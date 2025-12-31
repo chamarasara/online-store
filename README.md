@@ -109,7 +109,7 @@ Admin
 
 /admin – Dashboard
 
-/admin/orders – Order list (paginated)
+/admin/orders – Order list
 
 🔐 Key Technical Highlights
 
