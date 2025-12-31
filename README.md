@@ -4,6 +4,7 @@ This is a full-stack e-commerce application built using Next.js, PostgreSQL, Seq
 The application supports product listing, cart management, checkout with transaction safety, and basic admin features.
 
 🧰 Technology Stack
+
 Frontend
 
 Next.js (App Router)
@@ -32,10 +33,13 @@ Node.js (v18 or later)
 
 PostgreSQL
 
-npm or yarn
+yarn
+
+Docker & Docker Compose (if running via Docker)
 
 ⚙️ Setup Instructions
 1️⃣ Clone the Repository
+git clone <repository_url>
 cd online-store
 
 2️⃣ Install Dependencies
@@ -61,11 +65,13 @@ Create the PostgreSQL database:
 CREATE DATABASE online_store;
 
 
-Run Sequelize sync (if auto-sync is enabled) or migrations if configured.
+Run Sequelize sync (if auto-sync is enabled) or migrations if configured:
+
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all
 
 ▶️ Running the Application
-Start Development Server
-
+Option 1: Development Server
 yarn dev
 
 
@@ -73,7 +79,24 @@ The application will be available at:
 
 http://localhost:3000
 
+Option 2: Using Docker
+
+Build Docker images
+
+docker-compose build
+
+
+Run Docker containers
+
+docker-compose up
+
+
+Stop containers
+
+docker-compose down
+
 🔗 Available Routes
+
 User
 
 / – Product listing
@@ -106,8 +129,6 @@ GET	/api/products	Get all products
 POST	/api/orders	Place an order
 GET	/api/admin/orders	Get paginated orders
 GET	/api/admin/dashboard	Admin dashboard metrics
-📌 Notes
-
 👨‍💻 Author
 
 Chamara Sarathchandra
