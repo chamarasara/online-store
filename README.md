@@ -39,7 +39,7 @@ Docker & Docker Compose (if running via Docker)
 
 ⚙️ Setup Instructions
 1️⃣ Clone the Repository
-git clone <repository_url>
+git clone https://github.com/chamarasara/online-store
 cd online-store
 
 2️⃣ Install Dependencies
