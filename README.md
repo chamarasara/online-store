@@ -38,6 +38,7 @@ yarn
 Docker & Docker Compose (if running via Docker)
 
 ⚙️ Setup Instructions
+
 1️⃣ Clone the Repository
 git clone https://github.com/chamarasara/online-store
 cd online-store
