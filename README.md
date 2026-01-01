@@ -76,7 +76,8 @@ npx sequelize-cli db:seed:all
 ▶️ Running the Application
 
 Option 1: Development Server
-yarn dev
+
+```bash yarn dev
 
 
 The application will be available at:
