@@ -28,7 +28,7 @@ Make sure the following are installed on your machine:
 - Node.js (v18 or later)
 - PostgreSQL
 - Yarn
-- Docker & Docker Compose (optional)
+- Docker & Docker Compose 
 
 ---
 
@@ -77,11 +77,55 @@ npx sequelize-cli db:seed:all
 
 ## ▶️ Running the Application
 
+Option 1: Development Server
+
 ```bash
 yarn dev
 ```
 
 Visit: http://localhost:3000
+
+Option 2: Using Docker
+
+```bash
+docker-compose build
+docker-compose up
+docker-compose down
+```
+
+Visit: http://localhost:3000
+
+---
+
+## Available Routes
+
+User 
+/ – Product listing 
+/checkout – Checkout page 
+/order-confirmation – Order success page
+
+Admin 
+/admin – Dashboard 
+/admin/orders – Order list
+
+
+---
+
+## Key Technical Highlights
+
+Concurrency-safe checkout using database transactions 
+Row-level locking to prevent overselling 
+Redux Toolkit for predictable state management
+
+---
+
+## API Overview
+
+GET /api/products Get all products 
+POST /api/orders Place an order 
+GET /api/admin/orders 
+Get paginated orders 
+GET /api/admin/dashboard Admin dashboard metrics
 
 ---
 
@@ -89,3 +133,5 @@ Visit: http://localhost:3000
 
 **Chamara Sarathchandra**  
 Senior Full-Stack Developer
+
+---
