@@ -100,13 +100,20 @@ Visit: http://localhost:3000
 ## Available Routes
 
 User 
+
 / – Product listing 
+
 /checkout – Checkout page 
+
 /order-confirmation – Order success page
 
+
 Admin 
+
 /admin – Dashboard 
+
 /admin/orders – Order list
+
 
 
 ---
@@ -114,24 +121,33 @@ Admin
 ## Key Technical Highlights
 
 Concurrency-safe checkout using database transactions 
+
 Row-level locking to prevent overselling 
+
 Redux Toolkit for predictable state management
+
 
 ---
 
 ## API Overview
 
 GET /api/products Get all products 
+
 POST /api/orders Place an order 
+
 GET /api/admin/orders 
+
 Get paginated orders 
+
 GET /api/admin/dashboard Admin dashboard metrics
+
 
 ---
 
 ## Author
 
-**Chamara Sarathchandra**  
+**Chamara Sarathchandra** 
+
 Senior Full-Stack Developer
 
 ---
