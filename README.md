@@ -40,7 +40,7 @@ Docker & Docker Compose (if running via Docker)
 ⚙️ Setup Instructions
 
 1️⃣ Clone the Repository
-``bash git clone https://github.com/chamarasara/online-store
+git clone https://github.com/chamarasara/online-store
 cd online-store
 
 2️⃣ Install Dependencies
@@ -68,10 +68,13 @@ CREATE DATABASE online_store;
 
 Run Sequelize sync (if auto-sync is enabled) or migrations if configured:
 
+
 npx sequelize-cli db:migrate
+
 npx sequelize-cli db:seed:all
 
 ▶️ Running the Application
+
 Option 1: Development Server
 yarn dev
 
@@ -79,6 +82,7 @@ yarn dev
 The application will be available at:
 
 http://localhost:3000
+
 
 Option 2: Using Docker
 
@@ -125,12 +129,17 @@ Paginated admin order list
 Responsive UI using Tailwind CSS
 
 🧪 API Overview
-Method	Endpoint	Description
 GET	/api/products	Get all products
+
 POST	/api/orders	Place an order
+
 GET	/api/admin/orders	Get paginated orders
+
 GET	/api/admin/dashboard	Admin dashboard metrics
+
 👨‍💻 Author
 
+
 Chamara Sarathchandra
+
 Senior Full-Stack Developer
