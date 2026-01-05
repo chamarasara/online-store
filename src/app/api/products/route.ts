@@ -15,7 +15,6 @@ export async function GET() {
     const { getAllProducts } = await import('../../../services/product.service');
     
     await connectDB();
-    // await seedProducts();
 
     const products = await getAllProducts();
     return NextResponse.json(products);
